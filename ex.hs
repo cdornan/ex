@@ -1,4 +1,4 @@
-import           Data.List
+import           Data.List ((\\))
 
 
 perms :: Eq a => [a] -> [[a]]
@@ -7,7 +7,7 @@ perms xs = [ x:xs' | x <- xs, xs' <- perms (xs\\[x]) ]
 
 qsort :: Ord a => [a] -> [a]
 qsort []    = []
-qsort (h:t) = sort [ x | x <- t, x<=h ] ++ [h] ++ sort [ x | x <- t, x>h ]
+qsort (h:t) = qsort [ x | x <- t, x<=h ] ++ [h] ++ qsort [ x | x <- t, x>h ]
 
 repeat :: a -> [a]
 repeat a = as
@@ -33,3 +33,13 @@ primes :: [Int]
 primes = sieve [ 2.. ]
  where
    sieve (p:xs) = p : sieve [ n | n <- xs, n `mod` p > 0 ]
+
+--
+-- in a similar vein ...
+--
+
+odds' :: [Int]
+odds' = filter odd nats
+
+catMaybes' :: [Maybe a] -> [a]
+catMaybes' mbs = [ x | Just x <- mbs ]
