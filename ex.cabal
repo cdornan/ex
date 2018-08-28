@@ -1,0 +1,63 @@
+Name:                   ex
+Version:                1.0.0.0
+Synopsis:               Examples
+Description:            Examples
+Author:                 Chris Dornan
+License:                other
+Category:               Text
+Build-type:             Simple
+Stability:              Stable
+
+Cabal-Version:          >= 1.10
+
+
+Executable ex
+    Hs-Source-Dirs:     .
+
+    Main-Is:            ex.hs
+
+    Other-Modules:
+
+    Default-Language:   Haskell2010
+
+    GHC-Options:
+      -Wall
+      -fwarn-tabs
+      -Werror
+
+    Build-depends:
+        aeson
+      , asn1-types
+      , asn1-encoding
+      , ansi-wl-pprint
+      , cassava
+      , crypto-pubkey
+      , crypto-random
+      , aeson-pretty
+      , base
+      , base64-bytestring
+      , byteable
+      , bytestring
+      , cipher-aes
+      , containers
+      , deepseq
+      , directory
+      , filepath
+      , fmt                   >= 0.5.0.0
+      , hashable
+      , lens
+      , mtl
+      , old-locale
+      , optparse-applicative
+      , pbkdf
+      , process
+      , regex
+      , regex-tdfa
+      , safe
+      , sort
+      , setenv
+      , shelly
+      , text
+      , time
+      , unordered-containers
+      , vector

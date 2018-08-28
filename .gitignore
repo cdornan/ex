@@ -1,0 +1,9 @@
+.project
+.DS_Store
+._.DS_Store
+.pkglist
+._*
+dist
+rpmbuild/RPMS
+.hub
+.stack-work
